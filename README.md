@@ -59,7 +59,7 @@
 ### 构建步骤
 ```bash
 # 克隆项目
-git clone <repository-url>
+git clone https://github.com/jiuxianqwq/Naven-Modern.git
 cd Naven-Modern
 
 # 构建项目
@@ -76,9 +76,9 @@ cd Naven-Modern
 
 ### 基本设置
 模组支持以下配置文件：
-- `config/naven/settings.json` - 主要配置文件
-- `config/naven/binds.json` - 按键绑定配置
-- `config/naven/friends.json` - 好友列表
+- `settings.json` - 主要配置文件
+- `binds.json` - 按键绑定配置
+- `friends.json` - 好友列表
 
 ### 快捷键
 - **ClickGUI**: `右Shift` (默认)
