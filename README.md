@@ -64,9 +64,6 @@ cd Naven-Modern
 
 # 构建项目
 ./gradlew build
-
-# 生成模组文件
-./gradlew shadowJar
 ```
 
 构建完成后，模组文件将位于 `build/libs/` 目录中。
@@ -163,8 +160,8 @@ public class MyModule extends Module {
 
 ## 📞 联系方式
 
-- 作者: sb
-- 项目仓库: [GitHub](<repository-url>)
+- 共享者: 玖弦下划线巴卡
+- 项目仓库: [jiuxianqwq/Naven-Modern](https://github.com/jiuxianqwq/Naven-Modern)
 
 ---
 
