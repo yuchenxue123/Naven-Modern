@@ -59,7 +59,7 @@
 ### 构建步骤
 ```bash
 # 克隆项目
-git clone <repository-url>
+git clone https://github.com/jiuxianqwq/Naven-Modern.git
 cd Naven-Modern
 
 # 构建项目
