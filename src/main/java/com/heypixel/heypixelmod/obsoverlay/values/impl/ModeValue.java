@@ -3,6 +3,10 @@ package com.heypixel.heypixelmod.obsoverlay.values.impl;
 import com.heypixel.heypixelmod.obsoverlay.values.HasValue;
 import com.heypixel.heypixelmod.obsoverlay.values.Value;
 import com.heypixel.heypixelmod.obsoverlay.values.ValueType;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.BooleanValueBuilder;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.ModeValueBuilder;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.m.ModeBuilder;
+
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -53,5 +57,9 @@ public class ModeValue extends Value {
 
    public int getCurrentValue() {
       return this.currentValue;
+   }
+
+   public static ModeBuilder builder(HasValue hasValue) {
+       return new ModeValueBuilder(hasValue);
    }
 }

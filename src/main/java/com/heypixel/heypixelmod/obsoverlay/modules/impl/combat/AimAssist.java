@@ -41,19 +41,43 @@ import net.minecraft.world.phys.Vec3;
    category = Category.COMBAT
 )
 public class AimAssist extends Module {
-   BooleanValue attackPlayer = ValueBuilder.create(this, "Attack Player").setDefaultBooleanValue(true).build().getBooleanValue();
-   BooleanValue attackInvisible = ValueBuilder.create(this, "Attack Invisible").setDefaultBooleanValue(false).build().getBooleanValue();
-   BooleanValue attackAnimals = ValueBuilder.create(this, "Attack Animals").setDefaultBooleanValue(false).build().getBooleanValue();
-   BooleanValue attackMobs = ValueBuilder.create(this, "Attack Mobs").setDefaultBooleanValue(false).build().getBooleanValue();
-   BooleanValue clickonly = ValueBuilder.create(this, "Click Only").setDefaultBooleanValue(true).build().getBooleanValue();
-   BooleanValue slient = ValueBuilder.create(this, "Slient Aim").setDefaultBooleanValue(true).build().getBooleanValue();
-   FloatValue rotateSpeed = ValueBuilder.create(this, "Rotation Speed")
-      .setDefaultFloatValue(10.0F)
-      .setFloatStep(1.0F)
-      .setMinFloatValue(1.0F)
-      .setMaxFloatValue(90.0F)
-      .build()
-      .getFloatValue();
+   BooleanValue attackPlayer = BooleanValue.builder(this)
+           .name("Attack Player")
+           .value(true)
+           .build();
+
+   BooleanValue attackInvisible = BooleanValue.builder(this)
+           .name("Attack Invisible")
+           .value(false)
+           .build();
+
+   BooleanValue attackAnimals = BooleanValue.builder(this)
+           .name("Attack Animals")
+           .value(false)
+           .build();
+
+   BooleanValue attackMobs = BooleanValue.builder(this)
+           .name("Attack Mobs")
+           .value(false)
+           .build();
+
+   BooleanValue clickonly = BooleanValue.builder(this)
+           .name("Click Only")
+           .value(true)
+           .build();
+
+   BooleanValue slient = BooleanValue.builder(this)
+           .name("Slient Aim")
+           .value(true)
+           .build();
+
+   FloatValue rotateSpeed = FloatValue.builder(this)
+           .name("Rotation Speed")
+           .value(10.0F)
+           .range(1.0F, 90.0F)
+           .step(1.0F)
+           .build();
+
    FloatValue aimRange = ValueBuilder.create(this, "Aim Range")
       .setDefaultFloatValue(5.0F)
       .setFloatStep(0.1F)

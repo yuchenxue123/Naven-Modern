@@ -3,6 +3,9 @@ package com.heypixel.heypixelmod.obsoverlay.values.impl;
 import com.heypixel.heypixelmod.obsoverlay.values.HasValue;
 import com.heypixel.heypixelmod.obsoverlay.values.Value;
 import com.heypixel.heypixelmod.obsoverlay.values.ValueType;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.BooleanValueBuilder;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.b.BooleanBuilder;
+
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -41,4 +44,8 @@ public class BooleanValue extends Value {
          this.update.accept(this);
       }
    }
+
+    public static BooleanBuilder builder(HasValue hasValue) {
+        return new BooleanValueBuilder(hasValue);
+    }
 }

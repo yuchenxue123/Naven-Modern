@@ -3,6 +3,9 @@ package com.heypixel.heypixelmod.obsoverlay.values.impl;
 import com.heypixel.heypixelmod.obsoverlay.values.HasValue;
 import com.heypixel.heypixelmod.obsoverlay.values.Value;
 import com.heypixel.heypixelmod.obsoverlay.values.ValueType;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.TextValueBuilder;
+import com.heypixel.heypixelmod.obsoverlay.values.builder.s.TextBuilder;
+
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -45,4 +48,8 @@ public class StringValue extends Value {
    public String getCurrentValue() {
       return this.currentValue;
    }
+
+    public static TextBuilder builder(HasValue hasValue) {
+        return new TextValueBuilder(hasValue);
+    }
 }
